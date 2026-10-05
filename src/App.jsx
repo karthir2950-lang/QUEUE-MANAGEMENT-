@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import PublicLayout from './layouts/PublicLayout';
 import UserLayout from './layouts/UserLayout';
 import StaffLayout from './layouts/StaffLayout';
@@ -54,7 +54,7 @@ function App() {
     <ToastProvider>
       <AuthProvider>
         <NotificationProvider>
-          <Router basename={import.meta.env.BASE_URL}>
+          <Router>
             <Routes>
             {/* Public Routes */}
             <Route element={<PublicLayout />}>
