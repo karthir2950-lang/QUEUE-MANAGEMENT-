@@ -54,7 +54,7 @@ function App() {
     <ToastProvider>
       <AuthProvider>
         <NotificationProvider>
-          <Router>
+          <Router basename={import.meta.env.BASE_URL}>
             <Routes>
             {/* Public Routes */}
             <Route element={<PublicLayout />}>
